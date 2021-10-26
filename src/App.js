@@ -1,19 +1,33 @@
 
 import './App.css';
 import Header from './Header';
-import SearchIcon from '@mui/icons-material/Search';
+import Home from './Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <h1>
-        Hello
-        {/* Header
-        Home */}
-        <SearchIcon className="header_searchIcon" />
-      </h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Header />
+            <Home />
+          </Route>
+          <Route exact path="/checkout">
+            <Header />
+            <h1>Im checkout</h1>
+          </Route>
+        </Switch>
+
+
+      </div>
+    </Router>
   );
 }
 
