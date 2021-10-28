@@ -8,19 +8,21 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Checkout from './Checkout';
 
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Switch>
           <Route exact path="/">
-            <Header />
+
             <Home />
           </Route>
           <Route exact path="/checkout">
-            <Header />
+            <Checkout />
             <h1>Im checkout</h1>
           </Route>
         </Switch>
